@@ -90,17 +90,85 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*********************************OVERALL**************************************/
+
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+button{
+    background-color:#2B32B2;
+    border: 1px white solid;
+    color: white;
+}
+
+/***********************************NAV****************************************/
+
+nav h1, nav .wrap, #navbuttons, .navbutton{
+    display: inline-block;
+}
+
+nav{
+    background: #1488CC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-left: 10%;
+    padding-right: 10%;
+    position: fixed;
+    width: 100%;
+}
+
+nav h1{
+    color: white;
+    width: 20%;
+    font-family: 'Lato', sans-serif;
+}
+
+nav .wrap{
+    width: 30%;
+    text-align: center;
+}
+
+.search{
+    width:100%;
+}
+
+.search input{
+    width: 75%;
+}
+
+.search button{
+    width: 20%;
+    padding: 2px 0;
+    color: white;
+}
+
+#navbuttons{
+    width: 30%;
+    text-align: right;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbutton{
+    padding: 3px 30px;
+}
 
 
+/********************************SIDEBAR****************************************/
+.left-container{
+    width:25%;
+    min-height:100vh;
+    display: inline-block;
+    background-color: #1488CC;
+}
 
-
-
-
-
-
-
-
-
+/**********************************MAIN****************************************/
+.right-container{
+    width:75%;
+    min-height:100vh;
+    display: inline-block;
+}
 
 
 
