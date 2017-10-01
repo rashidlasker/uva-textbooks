@@ -160,7 +160,28 @@ nav .wrap{
     width:25%;
     min-height:100vh;
     display: inline-block;
-    background-color: #1488CC;
+    background-color: #49A6DC;
+    padding-top: 73px; 
+    vertical-align: top;
+}
+
+.btn-group button {
+    background-color: #49A6DC; /* Green background */
+    border: 1px solid blue; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 100%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+}
+
+.btn-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #1a8ed2;
 }
 
 /**********************************MAIN****************************************/
@@ -168,6 +189,8 @@ nav .wrap{
     width:75%;
     min-height:100vh;
     display: inline-block;
+    vertical-align: top;
+    padding-top: 73px;
 }
 
 
@@ -332,6 +355,7 @@ nav .wrap{
 
     tr,
     img {
+        opacity: 0.10;
         page-break-inside: avoid;
     }
 
