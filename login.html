@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>UVA F&Fs</title>
+        <title>Login</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
@@ -24,11 +24,9 @@
         <nav id="navbar">
             <h1><a href="index.html" style="text-decoration: none">UVA Free and For Sale</a></h1><div class="wrap">
                <div class="search">
-                    <label for = "search">
-                        <input type="text" class="searchTerm" placeholder="What are you looking for?"><button type="submit" class="searchButton" style="height: 32px">
-                        <i class="fa fa-search"></i>
-                        </button>
-                    </label>
+                  <input type="text" class="searchTerm" placeholder="What are you looking for?"><button type="submit" class="searchButton" style="height: 32px">
+                    <i class="fa fa-search"></i>
+                 </button>
                </div>
             </div><div id="navbuttons">
             </div>
@@ -44,8 +42,16 @@
             </div>
         </aside><section class="right-container">
 
-            <!-- This is the part of the page where the content generally changes -->
-            <img src="img/Acornmart.jpg" style="opacity: 0.70; height: 100vh; width: 100%">   
+            <!-- This is the part of the page where the content generally change -->
+            <div class="login">
+            <h1 align="center">Login</h1>
+            <form method="post">
+                <input type="text" name="u" placeholder="Email" required="required" />
+                <input type="password" name="p" placeholder="Password" required="required" />
+                <div class="wrapper">
+                    <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+                </div>
+            </form>    
         
         </section>
         

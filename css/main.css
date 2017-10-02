@@ -103,6 +103,42 @@ button{
     color: white;
 }
 
+input { 
+    width: 100%; 
+    margin-bottom: 10px; 
+    background: rgba(241,240,245,1);
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 13px;
+    color: #101010;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 4px;
+    box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+    -webkit-transition: box-shadow .5s ease;
+    -moz-transition: box-shadow .5s ease;
+    -o-transition: box-shadow .5s ease;
+    -ms-transition: box-shadow .5s ease;
+    transition: box-shadow .5s ease;
+}
+
+.login { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+    width:300px;
+    height:300px;
+}
+
+.login h1 { color: #1f76c6; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px;
+ text-align:center; }
+
+
+
+
+
 /***********************************NAV****************************************/
 
 nav h1, nav .wrap, #navbuttons, .navbutton{
@@ -127,6 +163,10 @@ nav h1{
 
 nav .wrap{
     width: 30%;
+    text-align: center;
+}
+
+.wrapper {
     text-align: center;
 }
 
@@ -194,7 +234,9 @@ nav .wrap{
 }
 
 
-
+a:visited {
+    color: white;
+}
 
 
 /* ==========================================================================
@@ -353,6 +395,10 @@ nav .wrap{
         display: table-header-group;
     }
 
+    th {
+        font-weight: bold;
+        color: ##2075c1;
+    }
     tr,
     img {
         opacity: 0.10;
