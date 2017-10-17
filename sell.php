@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Login</title>
+        <title>UVA F&Fs</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
@@ -22,11 +22,13 @@
 
         <!-- Add your site or application content here -->
         <nav id="navbar">
-            <h1><a href="index.html" >UVA Free and For Sale</a></h1><div class="wrap">
+            <h1><a href="index.html" style="text-decoration: none">UVA Free and For Sale</a></h1><div class="wrap">
                <div class="search">
-                  <input type="text" class="searchTerm" placeholder="What are you looking for?"><button type="submit" class="searchButton" style="height: 32px">
-                    <i class="fa fa-search"></i>
-                 </button>
+                    <label for = "search">
+                        <input type="text" class="searchTerm" placeholder="What are you looking for?"><button type="submit" class="searchButton" style="height: 32px">
+                        <i class="fa fa-search"></i>
+                        </button>
+                    </label>
                </div>
             </div><div id="navbuttons">
             </div>
@@ -42,17 +44,29 @@
             </div>
         </aside><section class="right-container">
 
-            <!-- This is the part of the page where the content generally change -->
-            <div class="login">
-            <h1 align="center">Login</h1>
-            <form action="form-handler.php" method="post">
-                <input type="text" name="u" placeholder="Email" required="required" />
-                <input type="password" name="p" placeholder="Password" required="required" />
-                <div class="wrapper">
-                    <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
-                </div>
-            </form>    
+            <?php
+                function convertToCard($name, $contact, $book)
+                   {
+                        echo '<div class="card">' . 
+                                '<img src="https://images-na.ssl-images-amazon.com/images/I/41cXTXhiabL._SX366_BO1,204,203,200_.jpg">' .
+                                '<div class="card-info">' . 
+                                    '<div class="namefield">Name: ' . $name . '</div>' .
+                                    '<div class="contactfield">Phone Number: ' . $contact . '</div>' .
+                                    '<div class="bookfield">Textbook Type: ' . $book . '</div>' .
+                                '</div>' .
+                            '</div>';        
+                   }
+                $names = array('Roger', 'Carl', 'Yash');
+                $numbers = array(2023034040, 2023034041, 2023034042);
+                $textbooks = array('Physics', 'Math', 'Econ');
+                $matrix = array('Name' => $names, 'Number' => $numbers, 'Books' => $textbooks);
+                //echo implode(",", $matrix['Name']);
+                for($i = 0; $i < sizeof($matrix); $i++)
+                {
+                    convertToCard($matrix['Name'][$i], $matrix['Number'][$i], $matrix['Books'][$i]);
+                }
         
+            ?>
         </section>
         
         <script src="js/plugins.js"></script>

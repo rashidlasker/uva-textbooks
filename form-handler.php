@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Login</title>
+        <title>UVA F&Fs</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
@@ -24,9 +24,11 @@
         <nav id="navbar">
             <h1><a href="index.html" >UVA Free and For Sale</a></h1><div class="wrap">
                <div class="search">
-                  <input type="text" class="searchTerm" placeholder="What are you looking for?"><button type="submit" class="searchButton" style="height: 32px">
-                    <i class="fa fa-search"></i>
-                 </button>
+                    <label for = "search">
+                        <input type="text" class="searchTerm" placeholder="What are you looking for?"><button type="submit" class="searchButton" style="height: 32px">
+                        <i class="fa fa-search"></i>
+                        </button>
+                    </label>
                </div>
             </div><div id="navbuttons">
             </div>
@@ -41,18 +43,19 @@
                 <button>Contact Us</button>
             </div>
         </aside><section class="right-container">
+<?php
 
-            <!-- This is the part of the page where the content generally change -->
-            <div class="login">
-            <h1 align="center">Login</h1>
-            <form action="form-handler.php" method="post">
-                <input type="text" name="u" placeholder="Email" required="required" />
-                <input type="password" name="p" placeholder="Password" required="required" />
-                <div class="wrapper">
-                    <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
-                </div>
-            </form>    
-        
+if ($_SERVER['REQUEST_METHOD'] == 'POST')
+{
+   $username = $_POST['u'];
+   $password = $_POST['p'];
+    if($password == ""){
+        echo '<h1>ERROR: Forgot Password</h1>';
+    }else{
+        echo '<h1 class="welcome-message">Welcome ' . $username . "! See your available items in the categories to the left.</h1>";
+    }
+}
+?>
         </section>
         
         <script src="js/plugins.js"></script>

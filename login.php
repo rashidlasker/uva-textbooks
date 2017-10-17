@@ -1,3 +1,18 @@
+<?php
+//   include 'textbooks_db_connection.php';
+//   if($_SERVER["REQUEST_METHOD"] == "POST") {
+//      $query = mysql_query("SELECT * FROM user_login_info where Username = '$_POST[username]' AND Password = '$_POST[password]'");
+//      $row = mysql_fetch_array($query);
+//      if(!empty($row['Username']) AND !empty($row['Password'])) {
+//        //$_SESSION['Username'] = $row['Password'];
+//        echo "SUCCESSFULLY LOGIN TO USER PROFILE ...";
+//        header('Location: HTTP://localhost/textbooks/index.html');
+//      } else {
+//        echo "Not Logged in; Enter Username and Password";
+//      }
+//    }
+?>
+
 <!doctype html>
 <html class="no-js" lang="">
     <head>
@@ -22,7 +37,7 @@
 
         <!-- Add your site or application content here -->
         <nav id="navbar">
-            <h1><a href="index.html" >UVA Free and For Sale</a></h1><div class="wrap">
+            <h1><a href="index.html">UVA Free and For Sale</a></h1><div class="wrap">
                <div class="search">
                   <input type="text" class="searchTerm" placeholder="What are you looking for?"><button type="submit" class="searchButton" style="height: 32px">
                     <i class="fa fa-search"></i>
